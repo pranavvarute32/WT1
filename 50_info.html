@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="dinfo.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">MyPortfolio</div>
+            
+        </nav>
+    </header>
+
+    <section id="home" class="home">
+        <img id="profilePic" src="https://static.vecteezy.com/system/resources/previews/032/176/191/non_2x/business-avatar-profile-black-icon-man-of-user-symbol-in-trendy-flat-style-isolated-on-male-profile-people-diverse-face-for-social-network-or-web-vector.jpg" alt="Profile Picture" class="profile-picture">
+        <h1 id="name">Pranav Varute!</h1>
+        <p id="profession"> Web Developer</p>
+        <button onclick="updateBio()">Update Bio</button>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p id="bio">I am a passionate web developer who loves creating beautiful and functional websites.</p>
+    </section>
+    <hr>
+
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+          
+        </ul>
+    </section>
+    <hr>
+
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Project 1</h3>
+            <p> Citizen Eye
+                
+                Citizen Eye is an innovative political website dedicated to empowering citizens with transparent and unbiased information. </p>
+        </div>
+        <div class="project">
+            <h3>Project 2</h3>
+            <p>A Healthcare Website
+
+                This healthcare website is designed to make medical information and services easily accessible. It offers features like health tips, a symptom checker, a directory of healthcare professionals, and online appointment booking. </p>
+        </div>
+    </section>
+    <hr>
+
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <p>Email: pranavvarute32@gmail.com</p>
+    </section>
+
+    
+    <div class="full-background"></div>
+
+    <script>
+        function updateBio() {
+            let name = prompt("Enter your name:");
+            if (name) {
+                document.getElementById("name").innerText = `Hi, I'm ${name}!`;
+            }
+
+            let profession = prompt("Enter your profession:");
+            if (profession) {
+                document.getElementById("profession").innerText = profession;
+            }
+
+            let bio = prompt("Enter a short bio about yourself:");
+            if (bio) {
+                document.getElementById("bio").innerText = bio;
+            }
+
+            let profilePicUrl = prompt("Enter the URL of your profile picture:");
+            if (profilePicUrl) {
+                document.getElementById("profilePic").src = profilePicUrl;
+            }
+        }
+    </script>
+    <body onload="updateBio()">
+
+</body>
+</html>
